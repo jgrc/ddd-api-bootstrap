@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+  jgrc-bootstrap-php:
+    container_name: jgrc-bootstrap-php
+    build: .
+    volumes:
+      - ../:/var/www/html

@@ -1,0 +1,36 @@
+{
+  "name": "jgrc/ddd-api-bootstrap",
+  "description": "Facade symfony Kernel and DDD Utils for experiments.",
+  "authors": [
+    {
+      "name": "Juan G. Rodríguez Carrión",
+      "email": "jgrodriguezcarrion@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "license": "MIT License",
+  "keywords": [
+    "kernel",
+    "ddd",
+    "bootstrap",
+    "api"
+  ],
+  "require": {
+    "php": ">=7.1",
+    "symfony/http-kernel": "^4.0",
+    "symfony/routing": "^4.0",
+    "beberlei/assert": "^2.9",
+    "ramsey/uuid": "^3.7",
+    "symfony/dependency-injection": "^4.0",
+    "symfony/config": "^4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5.5",
+    "symfony/var-dumper": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jgrc\\Bootstrap\\": "src"
+    }
+  }
+}
