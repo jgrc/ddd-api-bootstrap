@@ -16,6 +16,7 @@ use Symfony\Component\Routing\Loader\XmlFileLoader;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader as ContainerXmlFileLoader;
+use Symfony\Component\Routing\RouteCollection;
 
 class Kernel
 {
