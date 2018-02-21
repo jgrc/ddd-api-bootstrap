@@ -29,15 +29,8 @@ class Kernel
         string $containerXmlFile,
         array $eventSubscriberServices
     ) {
-        $this->routeCollection = (new XmlFileLoader(
-            new FileLocator($dirPath)
-        ))->load($routesXmlFile);
-
-        (new ContainerXmlFileLoader(
-            $this->container = new ContainerBuilder(),
-            new FileLocator($dirPath)
-        ))->load($containerXmlFile);
-
+        $this->routeCollection = $this->routes($dirPath, $containerXmlFile);
+        $this->container = self::container($dirPath, $containerXmlFile);
         $this->eventSubscriberServices = $eventSubscriberServices;
     }
 
@@ -83,5 +76,22 @@ class Kernel
         );
 
         return $dispatcher;
+    }
+
+    private function routes(string $dirPath, string $routesXmlFile): RouteCollection
+    {
+        return (new XmlFileLoader(
+            new FileLocator($dirPath)
+        ))->load($routesXmlFile);
+    }
+
+    public static function container(string $dirPath, string $containerXmlFile): ContainerBuilder
+    {
+        (new ContainerXmlFileLoader(
+            $container = new ContainerBuilder(),
+            new FileLocator($dirPath)
+        ))->load($containerXmlFile);
+
+        return $container;
     }
 }

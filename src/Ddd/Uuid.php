@@ -1,7 +1,7 @@
 <?php
 namespace Jgrc\Bootstrap\Ddd;
 
-use \Ramsey\Uuid\Uuid as RamseyUuid;
+use Ramsey\Uuid\Uuid as RamseyUuid;
 
 class Uuid
 {
