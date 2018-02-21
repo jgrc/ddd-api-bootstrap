@@ -29,7 +29,7 @@ class Kernel
         string $containerXmlFile,
         array $eventSubscriberServices
     ) {
-        $this->routeCollection = $this->routes($dirPath, $containerXmlFile);
+        $this->routeCollection = $this->routes($dirPath, $routesXmlFile);
         $this->container = self::container($dirPath, $containerXmlFile);
         $this->eventSubscriberServices = $eventSubscriberServices;
     }
